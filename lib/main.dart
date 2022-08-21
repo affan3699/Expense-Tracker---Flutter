@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:todoapp/Screens/Add_Screen.dart';
+import 'package:todoapp/Screens/Home_Screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: Add_Screen(),
+      home: HomeScreen(),
     );
   }
 }
