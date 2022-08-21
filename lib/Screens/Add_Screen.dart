@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:todoapp/Screens/Home_Screen.dart';
 
 class Add_Screen extends StatefulWidget {
   @override
@@ -151,7 +152,7 @@ class _Add_ScreenState extends State<Add_Screen> {
             SizedBox(height: 13.0),
             TextField(
               controller: amountInput,
-              readOnly: true,
+              readOnly: false,
               decoration: InputDecoration(
                 hintText: "Amount",
                 border: OutlineInputBorder(
@@ -232,6 +233,17 @@ class _Add_ScreenState extends State<Add_Screen> {
         textColor: Colors.white,
         fontSize: 15.0,
       );
+    } else {
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => HomeScreen(
+                  titleInput.text,
+                  descriptionInput.text,
+                  dateInput.text,
+                  timeInput.text,
+                  amountInput.text,
+                  _btn1SelectedVal)));
     }
   }
 }
