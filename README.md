@@ -4,8 +4,8 @@ A Expense Tracker App. What Does an Expense Tracker App Do? An expense tracker a
 
 # Screenshots
 <div>
-<img src="images/screenshot_1.png" alt="phone image" width="200px" />
-<img src="images/screenshot_2.png" alt="phone image" width="200px" />
+<img src="images/screenshot_1.png" alt="phone image" width="205px" />
+<img src="images/screenshot_2.png" alt="phone image" width="205px" />
 </div>
 
 ## Getting Started
