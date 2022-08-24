@@ -31,7 +31,7 @@ class _HomeScreeneState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
-    retrieveEntries();
+    //retrieveEntries();
 
     if (widget.title.isNotEmpty) {
       g.entries.add({
@@ -44,7 +44,7 @@ class _HomeScreeneState extends State<HomeScreen> {
         'count': ++g.count
       });
 
-      saveEntries();
+      //saveEntries();
     }
 
     setState(() {
@@ -209,8 +209,6 @@ class _HomeScreeneState extends State<HomeScreen> {
     print(g.entries);
     SharedPreferences prefs = await SharedPreferences.getInstance();
     prefs.setString('expenses', jsonEncode(g.entries));
-
-    prefs.setInt('intValue', 123);
   }
 
   Future<void> retrieveEntries() async {
@@ -219,6 +217,6 @@ class _HomeScreeneState extends State<HomeScreen> {
     g.entries = jsonDecode(prefs.getString('expenses') ?? '[]');
     print(g.entries);
 
-    //setState(() {});
+    setState(() {});
   }
 }
